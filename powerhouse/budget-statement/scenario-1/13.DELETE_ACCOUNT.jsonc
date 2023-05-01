@@ -13,8 +13,54 @@
             "title": "Sustainable Ecosystem Scaling"
         },
         "month": "2023/01",
-        "status": "Draft",
         "quoteCurrency": "DAI",
-        "accounts": []
+        "auditReports": [],
+        "vesting": [
+            {
+                "key": "ac433700445536fc4dc47647a423908ac5cc6b65",
+                "date": "2022-12-01",
+                "amount": "180.4",
+                "amountOld": "180.4",
+                "comment": "",
+                "currency": "MKR",
+                "vested": true
+            }
+        ],
+        "ftes": {
+            "value": 10.8,
+            "forecast": [
+                {
+                    "month": "2023/01",
+                    "value": 10.8
+                },
+                {
+                    "month": "2023/02",
+                    "value": 10.8
+                },
+                {
+                    "month": "2023/03",
+                    "value": 10.8
+                },
+                {
+                    "month": "2023/04",
+                    "value": 11
+                }
+            ]
+        },
+        "accounts": [],
+        "comments": [
+            {
+                "key": "ad02b397c9ca3313f814bd8b9346dc1c7ad7a7a0",
+                "author": {
+                    "ref": "makerdao/user",
+                    "id": "TEST-001",
+                    "username": "liberuum",
+                    "roleLabel": "Auditor"
+                },
+                "comment": "Comment about the budget statement",
+                "timestamp": "2023-02-21T10:15:26Z",
+                "status": "Draft"
+            }
+        ]
     }
 }

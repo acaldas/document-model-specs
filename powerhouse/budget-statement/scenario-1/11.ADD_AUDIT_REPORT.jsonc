@@ -1,11 +1,18 @@
 {
     "operation": {
-        "index": 3,
-        "type": "UPDATE_ACCOUNT",
+        "index": 10,
+        "type": "ADD_AUDIT_REPORT",
         "input": {
-            "accounts": [
+            "reports": [
                 {
-                    "address": "eth:0xb5eB779cE300024EDB3dF9b6C007E312584f6F4f"
+                    "timestamp": "2023-02-08T11:22:09Z",
+                    "report": {
+                        "data": "VEVTVA==",
+                        "mimeType": "application/pdf",
+                        "extension": "pdf",
+                        "fileName": "report.pdf"
+                    },
+                    "status": "ApprovedWithComments"
                 }
             ]
         }
@@ -18,8 +25,24 @@
         },
         "month": "2023/01",
         "quoteCurrency": "DAI",
-        "auditReports": [],
-        "vesting": [],
+        "auditReports": [
+            {
+                "timestamp": "2023-02-08T11:22:09Z",
+                "status": "ApprovedWithComments",
+                "report": "attachment://audits/Q1pqSc2iiEdpNLjRefhjnQ3nNc8="
+            }
+        ],
+        "vesting": [
+            {
+                "key": "ac433700445536fc4dc47647a423908ac5cc6b65",
+                "date": "2022-12-01",
+                "amount": "180.4",
+                "amountOld": "180.4",
+                "comment": "",
+                "currency": "MKR",
+                "vested": true
+            }
+        ],
         "ftes": {
             "value": 10.8,
             "forecast": [
@@ -60,15 +83,11 @@
                         },
                         "budgetCap": 100000,
                         "payment": 0,
-                        "actual": 25025,
+                        "actual": 8000,
                         "forecast": [
                             {
                                 "month": "2023/02",
-                                "value": 30000
-                            },
-                            {
-                                "month": "2023/03",
-                                "value": 30000
+                                "value": 50000
                             },
                             {
                                 "month": "2023/04",
@@ -98,6 +117,19 @@
                 ]
             }
         ],
-        "comments": []
+        "comments": [
+            {
+                "key": "ad02b397c9ca3313f814bd8b9346dc1c7ad7a7a0",
+                "author": {
+                    "ref": "makerdao/user",
+                    "id": "TEST-001",
+                    "username": "liberuum",
+                    "roleLabel": "Auditor"
+                },
+                "comment": "Comment about the budget statement",
+                "timestamp": "2023-02-21T10:15:26Z",
+                "status": "Draft"
+            }
+        ]
     }
 }

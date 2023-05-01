@@ -6,16 +6,9 @@
     2. Auditor either approves or escalates the budget if there is an issue
     3. If there is any change after the budget is approved then it must be approved again
 
-    The funding process of the accounts is done in two steps:
-    1. Team requests topup according to the difference between the target balance and the current balance
-    2. Topup transaction is stored in the document along with value transfered
-
     Accounts have the following information:
     1. Wallet address
     2. Name
-    3. Current account balance in a given timestamp
-    4. Target balance
-    5. Topup transfer information
     6. Expenses
 
     Expenses listed for each account contain:
@@ -38,16 +31,14 @@ Expected operations
     x APPROVE
     x ESCALATE
     x REOPEN
-    x REQUEST_TOPUP
-    x TRANSFER_TOPUP
 */
 
 {
     "name": "SES January 2023",
     "documentType": "powerhouse/budget-statement",
     "revision": 10,
-    "created": "2023-02-21 10:15:26",
-    "lastModified": "2023-02-21 13:12:49",
+    "created": "2023-02-21T10:15:26Z",
+    "lastModified": "2023-02-21T13:12:49Z",
     "data": {
         "owner": {
             "ref": "makerdao/core-unit",
@@ -55,53 +46,101 @@ Expected operations
             "title": "Sustainable Ecosystem Scaling"
         },
         "month": "2023/01",
-        "status": "Final", // Draft, Review, Final, Escalated
         "quoteCurrency": "DAI",
+        "ftes": {
+            "value": 10.8,
+            "forecast": [
+                {
+                    "month": "2023/01",
+                    "value": 10.8
+                },
+                {
+                    "month": "2023/02",
+                    "value": 10.8
+                },
+                {
+                    "month": "2023/03",
+                    "value": 10.8
+                },
+                {
+                    "month": "2023/04",
+                    "value": 11
+                }
+            ]
+        },
+        "auditReports": [
+            {
+                "timestamp": "2023-04-19T09:27:57.034Z",
+                "status": "ApprovedWithComments", // 'Approved' | 'ApprovedWithComments' | 'NeedsAction'| 'Escalated'
+                "report": "attachment://audits/Q1pqSc2iiEdpNLjRefhjnQ3nNc8="
+            }
+        ],
+        "vesting": [
+            {
+                "date": "2022-12-01",
+                "amount": "180.4",
+                "amountOld": "180.4",
+                "comment": "",
+                "currency": "MKR",
+                "vested": true
+            },
+            {
+                "date": "2024-01-01",
+                "amount": "180.4",
+                "amountOld": "160.4",
+                "comment": "Change of FTEs",
+                "currency": "MKR",
+                "vested": false
+            },
+            {
+                "date": "2024-02-01",
+                "amount": "23",
+                "amountOld": "23",
+                "comment": "",
+                "currency": "MKR",
+                "vested": false
+            }
+        ],
         "accounts": [
             {
                 "address": "eth:0xb5eB779cE300024EDB3dF9b6C007E312584f6F4f",
                 "name": "Grants Program",
-                "accountBalance": {
-                    "timestamp": "2023-02-21 11:22:09",
-                    "value": 4048.02
-                },
-                "targetBalance": {
-                    "comment": "3 months of operational runway",
-                    "value": 5048.02
-                },
-                "topupTransaction": {
-                    "id": "eth:0x3F23D0E301C458B095A02b12E3bC4c752a844eD9",
-                    "requestedValue": 1000,
-                    "value": 1000
-                },
                 "lineItems": [
                     {
-                        "category": {
-                            "ref": "makerdao/budget-category",
-                            "id": "TravelAndEntertainment",
-                            "title": "Travel & Entertainment",
-                            "headcountExpense": true
-                        },
                         "group": {
                             "ref": "makerdao/project",
                             "id": "core-unit/SES/2023/005",
                             "title": "Core Unit Operational Support"
+                        },
+                        "headcountExpense": true,
+                        "category": {
+                            "ref": "makerdao/budget-category",
+                            "id": "TravelAndEntertainment",
+                            "title": "Travel & Entertainment"
                         },
                         "budgetCap": 10000,
                         "payment": 0,
                         "actual": 4000,
                         "forecast": [
                             {
+                                "month": "2023/01",
+                                "value": 30000,
+                                "budgetCap": 10000
+                            },
+                            {
                                 "month": "2023/02",
-                                "value": 30000
+                                "value": 30000,
+                                "budgetCap": 10000
                             },
                             {
                                 "month": "2023/03",
-                                "value": 40000
+                                "value": 40000,
+                                "budgetCap": 10000
                             },
                             {
                                 "month": "2023/04",
-                                "value": 30000
+                                "value": 30000,
+                                "budgetCap": 10000
                             }
                         ]
                     },
@@ -123,6 +162,20 @@ Expected operations
                         "forecast": []
                     }
                 ]
+            }
+        ],
+        "comments": [
+            {
+                "key": "ad02b397c9ca3313f814bd8b9346dc1c7ad7a7a0",
+                "author": {
+                    "ref": "makerdao/user",
+                    "id": "TEST-001",
+                    "username": "liberuum",
+                    "roleLabel": "Auditor"
+                },
+                "comment": "Comment about the budget statement",
+                "timestamp": "2023-02-21T10:15:26Z",
+                "status": "" // ?
             }
         ]
     }

@@ -1,11 +1,24 @@
 {
     "operation": {
-        "index": 3,
-        "type": "UPDATE_ACCOUNT",
+        "index": 5,
+        "type": "ADD_VESTING",
         "input": {
-            "accounts": [
+            "vesting": [
                 {
-                    "address": "eth:0xb5eB779cE300024EDB3dF9b6C007E312584f6F4f"
+                    "key": "62bbc76d005e5ce0f2a06bc29b46d5f24527b49f",
+                    "date": "2024-01-01",
+                    "amount": "60.2",
+                    "currency": "MKR",
+                    "vested": false
+                },
+                {
+                    "key": "ac433700445536fc4dc47647a423908ac5cc6b65",
+                    "date": "2022-12-01",
+                    "amount": "180.4",
+                    "amountOld": "180.4",
+                    "comment": "",
+                    "currency": "MKR",
+                    "vested": true
                 }
             ]
         }
@@ -19,7 +32,27 @@
         "month": "2023/01",
         "quoteCurrency": "DAI",
         "auditReports": [],
-        "vesting": [],
+        "vesting": [
+            // vestings are sorted by date
+            {
+                "key": "ac433700445536fc4dc47647a423908ac5cc6b65",
+                "date": "2022-12-01",
+                "amount": "180.4",
+                "amountOld": "180.4",
+                "comment": "",
+                "currency": "MKR",
+                "vested": true
+            },
+            {
+                "key": "62bbc76d005e5ce0f2a06bc29b46d5f24527b49f",
+                "date": "2024-01-01",
+                "amount": "60.2",
+                "amountOld": "60.2",
+                "comment": "",
+                "currency": "MKR",
+                "vested": false
+            }
+        ],
         "ftes": {
             "value": 10.8,
             "forecast": [
@@ -60,15 +93,11 @@
                         },
                         "budgetCap": 100000,
                         "payment": 0,
-                        "actual": 25025,
+                        "actual": 8000,
                         "forecast": [
                             {
                                 "month": "2023/02",
-                                "value": 30000
-                            },
-                            {
-                                "month": "2023/03",
-                                "value": 30000
+                                "value": 50000
                             },
                             {
                                 "month": "2023/04",

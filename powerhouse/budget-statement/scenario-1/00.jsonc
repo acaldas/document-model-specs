@@ -3,8 +3,11 @@
     "state": {
         "owner": null,
         "month": null,
-        "status": "Draft", // Draft, Review, Final, Escalated
         "quoteCurrency": null,
-        "accounts": []
+        "auditReports": [],
+        "ftes": null,
+        "vesting": [],
+        "accounts": [],
+        "comments": []
     }
 }
