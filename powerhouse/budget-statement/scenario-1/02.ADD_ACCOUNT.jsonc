@@ -26,15 +26,18 @@
                             "forecast": [
                                 {
                                     "month": "2023/02",
-                                    "value": 30000
+                                    "value": 30000,
+                                    "budgetCap": 30000
                                 },
                                 {
                                     "month": "2023/03",
-                                    "value": 30000
+                                    "value": 30000,
+                                    "budgetCap": 30000
                                 },
                                 {
                                     "month": "2023/04",
-                                    "value": 20000
+                                    "value": 20000,
+                                    "budgetCap": 30000
                                 }
                             ]
                         }
@@ -97,15 +100,18 @@
                         "forecast": [
                             {
                                 "month": "2023/02",
-                                "value": 30000
+                                "value": 30000,
+                                "budgetCap": 30000
                             },
                             {
                                 "month": "2023/03",
-                                "value": 30000
+                                "value": 30000,
+                                "budgetCap": 30000
                             },
                             {
                                 "month": "2023/04",
-                                "value": 20000
+                                "value": 20000,
+                                "budgetCap": 30000
                             }
                         ],
                         "comment": null

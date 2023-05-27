@@ -1,12 +1,16 @@
 {
-    "operation": null,
+    "operation": {
+        "index": 0,
+        "type": "SET_MONTH",
+        "input": "2023/01"
+    },
     "state": {
         "owner": {
             "ref": "makerdao/core-unit",
             "id": "SES-001",
             "title": "Sustainable Ecosystem Scaling"
         },
-        "month": null,
+        "month": "2023/01",
         "quoteCurrency": "DAI",
         "ftes": {
             "value": 10.8,
@@ -29,9 +33,9 @@
                 }
             ]
         },
-        "auditReports": [],
         "vesting": [],
         "accounts": [],
+        "auditReports": [],
         "comments": []
     }
 }

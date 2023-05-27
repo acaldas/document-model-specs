@@ -12,12 +12,14 @@
                     "actual": 8000,
                     "forecast": [
                         {
-                            "month": "2023/02",
-                            "value": 50000
+                            "month": "2023/04",
+                            "value": 20000,
+                            "budgetCap": 30000
                         },
                         {
-                            "month": "2023/03",
-                            "value": null
+                            "month": "2023/02",
+                            "value": 50000,
+                            "budgetCap": 50000
                         }
                     ]
                 }
@@ -78,11 +80,13 @@
                         "forecast": [
                             {
                                 "month": "2023/02",
-                                "value": 50000
+                                "value": 50000,
+                                "budgetCap": 50000
                             },
                             {
                                 "month": "2023/04",
-                                "value": 20000
+                                "value": 20000,
+                                "budgetCap": 30000
                             }
                         ],
                         "comment": null
