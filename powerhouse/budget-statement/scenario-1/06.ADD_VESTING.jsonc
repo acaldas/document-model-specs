@@ -89,7 +89,8 @@
                         "group": {
                             "ref": "makerdao/project",
                             "id": "core-unit/SES/2023/005",
-                            "title": "Core Unit Operational Support"
+                            "title": "Core Unit Operational Support",
+                            "color": "#000"
                         },
                         "budgetCap": 100000,
                         "payment": 0,
@@ -112,7 +113,8 @@
                         "group": {
                             "ref": "makerdao/project",
                             "id": "core-unit/SES/2023/005",
-                            "title": "Core Unit Operational Support"
+                            "title": "Core Unit Operational Support",
+                            "color": "#000"
                         },
                         "headcountExpense": true,
                         "category": {
